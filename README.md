@@ -59,6 +59,16 @@ sysctl --system
 
 
 ## Deploy node js app on k8s cluster
-     
 
-docker run -u 0 --privileged --name jenkins -it -d -p 8080:8080 -p 50000:50000
+## Run jenkins     
+run jenkins on continer 
+> -v /var/run/docker.sock:/var/run/docker.sock \
+> -v $ (which docker) :/usr/bin/docker \
+> -v /home/jenkins_home:/var/jenkins_home\
+> jenkins/jenkins:latest
+
+docker run -u 0 -- privileged -- name jenkins -it -d -p 8080:8080 -p 50000:50000
+
+
+
+
