@@ -70,5 +70,11 @@ run jenkins on continer
 docker run -u 0 -- privileged -- name jenkins -it -d -p 8080:8080 -p 50000:50000
 
 
+in jenkins file 
+clone the code
+build docker image
+push the image
+login to dockerhub using credential which stored on jenkins
+deploy to k8s
 
 
